@@ -1,3 +1,11 @@
+import zipfile
+
+# Ganti 'nama_file.zip' dengan nama file ZIP yang ingin Anda ekstrak
+nama_file_zip = 'all_data.zip'
+
+# Mengekstrak file ZIP
+with zipfile.ZipFile(nama_file_zip, 'r') as zip_ref:
+    zip_ref.extractall()
 
 import pandas as pd
 import matplotlib.pyplot as plt
