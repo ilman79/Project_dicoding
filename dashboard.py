@@ -7,7 +7,7 @@ from babel.numbers import format_currency
 
 sns.set(style='dark')
 url_csv = 'https://docs.google.com/spreadsheets/d/1WrbsIZQ-Ue7EbZ6cMsOCzNHnRspYDuzu_yiL9tZSYv8/edit#gid=395517955'
-all_data = pd.read_csv(url)
+all_data = pd.read_csv(url_csv)
 
 def create_daily_orders_df(all_data):
     daily_orders_df = all_data.resample(rule='D', on='order_approved_at').agg({
