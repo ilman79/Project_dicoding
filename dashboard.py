@@ -1,8 +1,4 @@
-pip install pandas
-pip install matplotlib
-pip install seaborn
-pip install streamlit
-pip install babel
+pip install -r requirements.txt
 
 import pandas as pd
 import matplotlib.pyplot as plt
