@@ -12,7 +12,7 @@ nama_file_zip = 'all_data.zip'
 with zipfile.ZipFile(nama_file_zip, 'r') as zip_ref:
     zip_ref.extractall()
 
-
+all_data = pd.read_csv('all_data.csv')
 sns.set(style='dark')
 def create_daily_orders_df(all_data):
     daily_orders_df = all_data.resample(rule='D', on='order_approved_at').agg({
