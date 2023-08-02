@@ -256,15 +256,15 @@ st.subheader("Seller Order")
 fig, ax = plt.subplots(figsize=(20, 10))
 colors = ["#90CAF9", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3"]
 sns.barplot(
-    x="count",
-    y="seller_id",
+    x="seller_id",
+    y="count",
     data=top_5_seller.sort_values(by="count", ascending=False).head(5),
     palette=colors,
     ax=ax
 )
 ax.set_title("Top 5 seller", loc="center", fontsize=30)
-ax.set_ylabel(None)
-ax.set_xlabel(None)
+ax.set_ylabel('count')
+ax.set_xlabel('seller_id')
 ax.tick_params(axis='y', labelsize=20)
 ax.tick_params(axis='x', labelsize=15)
 st.pyplot(fig)
