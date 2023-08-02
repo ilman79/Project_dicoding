@@ -256,8 +256,8 @@ st.subheader("Seller Order")
 fig, ax = plt.subplots(figsize=(20, 10))
 colors = ["#90CAF9", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3"]
 sns.barplot(
-    x="count",
-    y="seller_id",
+    x="seller_id",
+    y="count",
     data=top_5_seller.sort_values(by="count", ascending=False).head(5),
     palette=colors,
     ax=ax
