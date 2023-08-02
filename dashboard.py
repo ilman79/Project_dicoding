@@ -1,4 +1,9 @@
 import zipfile
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import streamlit as st
+from babel.numbers import format_currency
 
 # Ganti 'nama_file.zip' dengan nama file ZIP yang ingin Anda ekstrak
 nama_file_zip = 'all_data.zip'
@@ -7,11 +12,6 @@ nama_file_zip = 'all_data.zip'
 with zipfile.ZipFile(nama_file_zip, 'r') as zip_ref:
     zip_ref.extractall()
 
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import streamlit as st
-from babel.numbers import format_currency
 
 sns.set(style='dark')
 url_csv = 'https://docs.google.com/spreadsheets/d/1WrbsIZQ-Ue7EbZ6cMsOCzNHnRspYDuzu_yiL9tZSYv8/edit#gid=395517955'
