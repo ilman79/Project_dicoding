@@ -258,7 +258,7 @@ colors = ["#90CAF9", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3
 sns.barplot(
     x="count",
     y="seller_id",
-    data=top_5_seller.sort_values(by="seller_id", ascending=False).head(5),
+    data=top_5_seller.sort_values(by="count", ascending=False).head(5),
     palette=colors,
     ax=ax
 )
